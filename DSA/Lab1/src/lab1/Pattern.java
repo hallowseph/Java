@@ -8,7 +8,7 @@ package lab1;
  *
  * @author xxg8089
  */
-public class Lab1 {
+public class Pattern {
 
     /**
      * @param args the command line arguments
