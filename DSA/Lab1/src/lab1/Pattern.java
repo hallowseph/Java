@@ -29,18 +29,18 @@ public class Pattern {
     
     public static void diamond(int totalHeight, int currentRow){
         //print spaces(outside of diamond)
-        //-----------------------------
+        repeatlyPrint(totalHeight - currentRow, " ");
         //print asterisks and spaces
-        //-----------------------------
+        repeatlyPrint(2 * currentRow - 1, "*");
         System.out.println();
-        /*if(----------)
+        if(currentRow < totalHeight)
         {
-            diamond(----------,---------);
-        }*/
+            diamond(totalHeight, currentRow + 1);
+        }
         //print spaces
-        //-----------------------------
+        repeatlyPrint(totalHeight - currentRow, " ");
         //print asterisks and spaces
-        //-----------------------------
+        repeatlyPrint(2 * currentRow - 1, "*");
         System.out.println();
     }
 }
