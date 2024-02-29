@@ -14,7 +14,7 @@ public class Pattern {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        diamond(6, 1);
+        diamond(6, 6);
     }
 
     public static void repeatlyPrint(int amount, String pattern) 
@@ -29,22 +29,22 @@ public class Pattern {
 
      public static void diamond(int totalHeight, int currentRow) {
         // print spaces (outside of diamond)
-        repeatlyPrint(totalHeight - currentRow, " ");
+        repeatlyPrint(currentRow-1, " ");
 
         // print asterisks and spaces
-        repeatlyPrint(currentRow, "* ");
+        repeatlyPrint(totalHeight - currentRow, "* ");
 
         System.out.println();
 
-        if (currentRow < totalHeight) {
-            diamond(totalHeight, currentRow + 1);
+        if (currentRow > 1) {
+            diamond(totalHeight, currentRow - 1);
         }
 
         // print spaces (outside of diamond)
-        repeatlyPrint(totalHeight - currentRow, " ");
+        repeatlyPrint(currentRow-1, " ");
 
         // print asterisks and spaces
-        repeatlyPrint(currentRow, "* ");
+        repeatlyPrint(totalHeight - currentRow, "* ");
 
         System.out.println();
     }
