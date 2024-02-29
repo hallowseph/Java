@@ -27,26 +27,26 @@ public class Pattern {
         }
     }
 
-    public static void diamond(int totalHeight, int currentRow) {
-        //print spaces(outside of diamond)
+     public static void diamond(int totalHeight, int currentRow) {
+        // print spaces (outside of diamond)
         repeatlyPrint(totalHeight - currentRow, " ");
-        
-        //print asterisks and spaces       
+
+        // print asterisks and spaces
         repeatlyPrint(currentRow, "* ");
-        
+
         System.out.println();
 
-        if (currentRow < totalHeight) 
-        {
+        if (currentRow < totalHeight) {
             diamond(totalHeight, currentRow + 1);
         }
-        
-        //print spaces
-        repeatlyPrint(totalHeight-currentRow, " ");
-        
-        //print asterisks and spaces
+
+        // print spaces (outside of diamond)
+        repeatlyPrint(totalHeight - currentRow, " ");
+
+        // print asterisks and spaces
         repeatlyPrint(currentRow, "* ");
-        
+
         System.out.println();
     }
 }
+
