@@ -23,7 +23,7 @@ public class Array {
     public static void insertToArray(int number, int[] list, int size) {
         int index = 0;
         //to find right position for inserting a number and position will be stored in the index
-        for (index = 0; index < size && list[index] < number; index++);
+        for (; index < size && list[index] < number; index++);
         // shift numbers to make space to insert a new number
         for (int i = size - 1; i > index; i--) 
         {
