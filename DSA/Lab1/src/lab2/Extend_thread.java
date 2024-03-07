@@ -22,10 +22,13 @@ public class Extend_thread extends Thread {
 
     public void run() {
         for (int i = 0; i < shared_array.length; i++) {
-            book();
+            synchronized (this.shared_array) 
+                {
+                    book();
+                }
+            }
         }
-    }
-
+    
     public synchronized void book() {
         int i = 0;
         //looking for an empty seat
@@ -37,5 +40,3 @@ public class Extend_thread extends Thread {
         }
     }
 }
-
-
