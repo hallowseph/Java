@@ -21,7 +21,7 @@ private static int findInArray(int[] list, int targetValue)
     {
         int index = 0;
         
-        for(; list[index]!= targetValue && list.length < index ; index++);
+        for(; list[index]!= targetValue && index < list.length; index++);
         
         if(index <list.length)
             return index;
