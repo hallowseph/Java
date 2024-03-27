@@ -9,5 +9,7 @@ package lab5;
  * @author josep
  */
 public class Node {
-    
+    public String data;
+    public Node prev;
+    public Node next;
 }
