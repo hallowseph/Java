@@ -73,13 +73,10 @@ public class LinkedList {
         if (current == null) {
             return null;
         }
-
         Node previousNode = toDoublyLinkedList(current.next);
-
         if (previousNode != null) {
             previousNode.prev = current;
         }
-
         current.next = previousNode;
         return current;
     }
