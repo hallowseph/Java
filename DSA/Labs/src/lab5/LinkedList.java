@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package lab5;
 
 /**
@@ -74,18 +70,17 @@ public class LinkedList {
     }
 
     private Node toDoublyLinkedList(Node current) {
-        if(current == null){
+        if (current == null) {
             return null;
         }
-        
-        Node link = toDoublyLinkedList(current.next);
-        
-        if(link != null){
-            link.prev = current;
+
+        Node previousNode = toDoublyLinkedList(current.next);
+
+        if (previousNode != null) {
+            previousNode.prev = current;
         }
-        
-        current.next = link;
-        
+
+        current.next = previousNode;
         return current;
     }
 }

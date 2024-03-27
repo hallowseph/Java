@@ -30,7 +30,7 @@ public class DSA_Quiz5 {
         int guess;
 
         while (lower_bound < upper_bound) {
-            guess = (lower_bound + upper_bound) / 2;
+            guess = (lower_bound + upper_bound) / 2; 
             System.out.println("is your number: " + guess + "? (l for lower, h for higher, y for yes)");
             String answer = scanner.nextLine();
 
