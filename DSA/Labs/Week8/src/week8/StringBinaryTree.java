@@ -67,24 +67,24 @@ public class StringBinaryTree {
     linkParent(root);
 }
 
-private BTreeNode linkParent(BTreeNode node)
+private BTreeNode linkParent(BTreeNode root)
 {
-    if (node == null) {
+    if (root == null) {
         return null;
     }
     
-    BTreeNode leftResult = linkParent(node.left);
-    BTreeNode rightResult = linkParent(node.right);
+    BTreeNode leftResult = linkParent(root.left);
+    BTreeNode rightResult = linkParent(root.right);
 
-    if (node.left != null) {
-        node.left.parent = node;
+    if (root.left != null) {
+        root.left.parent = root;
     }
 
-    if (node.right != null) {
-        node.right.parent = node;
+    if (root.right != null) {
+        root.right.parent = root;
     }
 
-    return node;
+    return root;
 }
     
     public void traverse()
