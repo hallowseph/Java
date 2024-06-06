@@ -10,8 +10,8 @@ import java.util.LinkedList;
  *
  * @author josep
  */
-public class LinkedListLinearSearch<T> {
-    public static<T>boolean search(LinkedList<T> list, T target){
+public class ArrayBinarySearch {
+    public static<T> boolean search(LinkedList<T> list, T target){
         return list.contains(target);
     }
 }
