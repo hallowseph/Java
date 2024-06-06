@@ -2,43 +2,44 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package LABS;
+package CodingChecklist;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 /**
  *
  * @author josep
  */
-public class LinkedStack<T> {
-    private LinkedList<T> stack;
+public class ArrayQueue<T> {
+    private ArrayList<T> queue;
     
-    public LinkedStack(){
-        stack = new LinkedList<>();
+    public ArrayQueue(){
+        queue = new ArrayList<>();
     }
     
-    public void push(T element){
-        stack.addLast(element);
+    public void enqueue(T element){
+        queue.add(element);
     }
     
-    public T pop(){
+    public T dequeue(){
         if(isEmpty()){
             return null;
         }
-        return stack.removeLast();
+        return queue.remove(0);
     }
-    public T peek(){
+    
+    public T first(){
         if(isEmpty()){
             return null;
         }
-        return stack.getLast();
+        return queue.get(0);
     }
     
     public boolean isEmpty(){
-        return stack.isEmpty();
+        return queue.isEmpty();
     }
     
     public int size(){
-        return stack.size();
-    }    
+        return queue.size();
+    }
 }

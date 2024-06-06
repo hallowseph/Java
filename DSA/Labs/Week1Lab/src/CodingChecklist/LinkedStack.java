@@ -2,37 +2,36 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package LABS;
+package CodingChecklist;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
  * @author josep
  */
-public class ArrayStack<T> {
-    private ArrayList<T> stack;
+public class LinkedStack<T> {
+    private LinkedList<T> stack;
     
-    public ArrayStack(){
-        stack = new ArrayList<>();
+    public LinkedStack(){
+        stack = new LinkedList<>();
     }
     
     public void push(T element){
-        stack.add(element);
+        stack.addLast(element);
     }
     
     public T pop(){
         if(isEmpty()){
             return null;
         }
-        return stack.remove(stack.size()-1);
+        return stack.removeLast();
     }
-    
     public T peek(){
         if(isEmpty()){
             return null;
         }
-        return stack.get(stack.size()-1);
+        return stack.getLast();
     }
     
     public boolean isEmpty(){
@@ -41,5 +40,5 @@ public class ArrayStack<T> {
     
     public int size(){
         return stack.size();
-    }
+    }    
 }

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package LABS;
+package CodingChecklist;
 
 import java.util.ArrayList;
 
@@ -10,36 +10,36 @@ import java.util.ArrayList;
  *
  * @author josep
  */
-public class ArrayQueue<T> {
-    private ArrayList<T> queue;
+public class ArrayStack<T> {
+    private ArrayList<T> stack;
     
-    public ArrayQueue(){
-        queue = new ArrayList<>();
+    public ArrayStack(){
+        stack = new ArrayList<>();
     }
     
-    public void enqueue(T element){
-        queue.add(element);
+    public void push(T element){
+        stack.add(element);
     }
     
-    public T dequeue(){
+    public T pop(){
         if(isEmpty()){
             return null;
         }
-        return queue.remove(0);
+        return stack.remove(stack.size()-1);
     }
     
-    public T first(){
+    public T peek(){
         if(isEmpty()){
             return null;
         }
-        return queue.get(0);
+        return stack.get(stack.size()-1);
     }
     
     public boolean isEmpty(){
-        return queue.isEmpty();
+        return stack.isEmpty();
     }
     
     public int size(){
-        return queue.size();
+        return stack.size();
     }
 }
